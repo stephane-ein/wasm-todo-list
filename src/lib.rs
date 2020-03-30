@@ -8,6 +8,14 @@ struct Todo {
 }
 
 #[wasm_bindgen]
+impl Todo {
+  pub fn getName(&mut self) -> String {
+    let result = String::from(&self.name);
+    result
+  }
+}
+
+#[wasm_bindgen]
 struct Todos {
   values: Vec<Todo>,
 }
